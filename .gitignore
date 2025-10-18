@@ -7,10 +7,36 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+.pnpm-store
+
+# Build outputs
 dist
 dist-ssr
+.turbo
+.next
+build
+.cache
+
+# Environment variables
 *.local
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Testing
+coverage
+.nyc_output
+playwright-report
+test-results
+
+# Strapi
+apps/cms/.tmp
+apps/cms/build
+apps/cms/database/*.db
+apps/cms/public/uploads
 
 # Editor directories and files
 .vscode/*

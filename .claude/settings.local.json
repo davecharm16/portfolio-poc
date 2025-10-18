@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-strapi-app:*)",
+      "Bash(export STRAPI_DISABLE_TELEMETRY=1)",
+      "Bash(export STRAPI_DISABLE_UPDATE_NOTIFICATION=1)",
+      "Bash(yes N)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm --filter web build)",
+      "Bash(pkill:*)",
+      "Bash(pnpm run dev:*)",
+      "Bash(pnpm dev:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
