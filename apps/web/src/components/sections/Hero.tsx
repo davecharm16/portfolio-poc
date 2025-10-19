@@ -1,64 +1,80 @@
-import { Section } from '@/components/layout/Section';
+import { motion } from 'framer-motion';
+import { LampContainer } from '@/components/ui/lamp';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 export function Hero() {
   return (
-    <Section className="pt-32 pb-20 bg-gradient-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900">
-      <div className="flex flex-col items-center text-center">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
+    <LampContainer>
+      <motion.div
+        initial={{ opacity: 0.5, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: 'easeInOut',
+        }}
+        className="flex flex-col items-center text-center pt-16 md:pt-32"
+      >
+        {/* Animated heading with gradient */}
+        <h1 className="mt-8 bg-gradient-to-br from-gray-900 to-gray-700 dark:from-slate-300 dark:to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl mb-6">
           Dave Charm Bulaquena
         </h1>
-        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-4">
+
+        {/* Animated subtitle */}
+        <p className="text-xl md:text-2xl mb-4 text-gray-700 dark:text-slate-400">
           Full Stack Developer & Solutions Designer
         </p>
-        <p className="text-lg text-gray-500 dark:text-gray-500 max-w-2xl mb-8">
+
+        <p className="text-base md:text-lg text-gray-600 dark:text-slate-500 max-w-2xl mb-8">
           Architecting scalable web applications with type-safe code, modern tooling, and
           user-centered design thinking
         </p>
 
-        <div className="flex gap-4">
+        {/* Animated CTA buttons */}
+        <div className="flex gap-4 mb-12">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center rounded-lg bg-gray-900 px-6 py-3 text-sm font-semibold text-white hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100 transition-colors"
+            className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gray-900 dark:bg-slate-200 px-6 py-3 text-sm font-semibold text-white dark:text-slate-900 transition-all hover:scale-105 hover:shadow-xl"
           >
-            Get in touch
+            <span className="relative z-10">Get in touch</span>
           </a>
           <a
             href="#projects"
-            className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-50 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 transition-colors"
+            className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg border border-gray-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 px-6 py-3 text-sm font-semibold text-gray-900 dark:text-slate-200 backdrop-blur-sm transition-all hover:scale-105 hover:border-gray-400 dark:hover:border-slate-500 hover:shadow-xl"
           >
-            View projects
+            <span className="relative z-10">View projects</span>
           </a>
         </div>
 
-        <div className="flex gap-6 mt-12">
+        {/* Animated social links */}
+        <div className="flex gap-6">
           <a
             href="https://github.com/davebulaquena"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+            className="group relative text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-200 transition-all hover:scale-110"
             aria-label="GitHub"
           >
-            <Github className="h-6 w-6" />
+            <Github className="h-6 w-6 transition-transform group-hover:rotate-12" />
           </a>
           <a
             href="https://linkedin.com/in/davebulaquena"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+            className="group relative text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-200 transition-all hover:scale-110"
             aria-label="LinkedIn"
           >
-            <Linkedin className="h-6 w-6" />
+            <Linkedin className="h-6 w-6 transition-transform group-hover:rotate-12" />
           </a>
           <a
             href="mailto:dave@davebulaquena.com"
-            className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+            className="group relative text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-200 transition-all hover:scale-110"
             aria-label="Email"
           >
-            <Mail className="h-6 w-6" />
+            <Mail className="h-6 w-6 transition-transform group-hover:rotate-12" />
           </a>
         </div>
-      </div>
-    </Section>
+      </motion.div>
+    </LampContainer>
   );
 }

@@ -1,4 +1,5 @@
 import { Section } from '@/components/layout/Section';
+import { ScrollReveal } from '@/components/common/ScrollReveal';
 import { useProjects } from '@/hooks/useProjects';
 import { LoadingSkeleton } from '@/components/common/LoadingSkeleton';
 import { ErrorMessage } from '@/components/common/ErrorMessage';
@@ -44,14 +45,18 @@ export function Projects() {
 
   return (
     <Section id="projects" className="bg-white dark:bg-gray-950">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
-        Featured Projects
-      </h2>
+      <ScrollReveal variant="fade-up">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+          Featured Projects
+        </h2>
+      </ScrollReveal>
 
       {isUsingMockData && !isLoading && (
-        <p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-8">
-          Showing sample projects. Connect Strapi to display your real projects.
-        </p>
+        <ScrollReveal variant="fade-up" delay={100}>
+          <p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-8">
+            Showing sample projects. Connect Strapi to display your real projects.
+          </p>
+        </ScrollReveal>
       )}
 
       {isLoading && (
@@ -71,8 +76,10 @@ export function Projects() {
 
       {!isLoading && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {displayProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          {displayProjects.map((project, index) => (
+            <ScrollReveal key={project.id} variant="fade-up" delay={index * 150}>
+              <ProjectCard project={project} />
+            </ScrollReveal>
           ))}
         </div>
       )}

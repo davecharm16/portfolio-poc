@@ -1,113 +1,89 @@
 import { Section } from '@/components/layout/Section';
+import { ScrollReveal } from '@/components/common/ScrollReveal';
+import { BlurredInfiniteSlider } from '@/components/ui/infinite-slider';
 
 const skillCategories = [
   {
     title: 'Frontend',
     skills: [
-      'React 18',
-      'TypeScript',
-      'Next.js',
-      'Vue.js',
-      'Tailwind CSS',
-      'shadcn/ui',
-      'Vite',
-      'TanStack Query',
-      'Framer Motion',
-      'React Hook Form',
-      'Zod',
+      { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+      { name: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+      { name: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+      { name: 'Vue.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
+      { name: 'Tailwind CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+      { name: 'Vite', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' },
+      { name: 'Redux', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg' },
     ],
+    speed: 40,
   },
   {
-    title: 'Backend & APIs',
+    title: 'Backend',
     skills: [
-      'Node.js',
-      'Express',
-      'Strapi CMS',
-      'tRPC',
-      'REST APIs',
-      'GraphQL',
-      'PostgreSQL',
-      'Prisma',
-      'Serverless Functions',
+      { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+      { name: 'Express', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+      { name: 'PostgreSQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+      { name: 'MongoDB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+      { name: 'GraphQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg' },
+      { name: 'Prisma', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg' },
     ],
+    speed: 35,
   },
   {
-    title: 'DevOps & Cloud',
+    title: 'Architecture & DevOps',
     skills: [
-      'Vercel',
-      'Railway',
-      'AWS',
-      'Docker',
-      'GitHub Actions',
-      'CI/CD',
-      'Monorepo (pnpm)',
-      'Cloudinary',
+      { name: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
+      { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+      { name: 'Kubernetes', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg' },
+      { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+      { name: 'GitHub', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
+      { name: 'Nginx', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg' },
     ],
-  },
-  {
-    title: 'Testing & Quality',
-    skills: [
-      'Vitest',
-      'Playwright',
-      'Testing Library',
-      'Cypress',
-      'Jest',
-      'ESLint',
-      'Prettier',
-      'TypeScript Strict',
-    ],
-  },
-  {
-    title: 'Design & Tools',
-    skills: [
-      'Figma',
-      'Design Systems',
-      'Component Libraries',
-      'Accessibility (WCAG)',
-      'Responsive Design',
-      'Git',
-      'VS Code',
-    ],
-  },
-  {
-    title: 'Architecture',
-    skills: [
-      'Jamstack',
-      'Microservices',
-      'Monorepo',
-      'Component-Based',
-      'Type-Safe APIs',
-      'State Management',
-      'Performance Optimization',
-    ],
+    speed: 38,
   },
 ];
 
 export function Skills() {
   return (
     <Section id="skills" className="bg-gray-50 dark:bg-gray-900">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-        Skills & Technologies
-      </h2>
+      <ScrollReveal variant="fade-up">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+          Skills & Technologies
+        </h2>
+      </ScrollReveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {skillCategories.map((category) => (
-          <div key={category.title}>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-              {category.title}
-            </h3>
-            <ul className="space-y-2">
-              {category.skills.map((skill) => (
-                <li
-                  key={skill}
-                  className="text-gray-600 dark:text-gray-400 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600" />
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
+      <div className="space-y-16">
+        {skillCategories.map((category, index) => (
+          <ScrollReveal key={category.title} variant="fade-up" delay={index * 100}>
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center">
+                {category.title}
+              </h3>
+
+              <BlurredInfiniteSlider
+                speed={category.speed}
+                gap={48}
+                fadeWidth={80}
+                reverse={index % 2 === 1}
+                className="py-6"
+              >
+                {category.skills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex-shrink-0 flex items-center gap-4 px-8 py-4 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg transition-shadow"
+                  >
+                    <img
+                      src={skill.logo}
+                      alt={skill.name}
+                      className="w-10 h-10 object-contain dark:invert-0"
+                    />
+                    <span className="text-base font-medium text-gray-900 dark:text-gray-100 whitespace-nowrap">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
+              </BlurredInfiniteSlider>
+            </div>
+          </ScrollReveal>
         ))}
       </div>
     </Section>
