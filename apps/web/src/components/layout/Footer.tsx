@@ -2,9 +2,9 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import { Container } from './Container';
 
 const socialLinks = [
-  { name: 'GitHub', href: 'https://github.com/davebulaquena', icon: Github },
-  { name: 'LinkedIn', href: 'https://linkedin.com/in/davebulaquena', icon: Linkedin },
-  { name: 'Email', href: 'mailto:dave@davebulaquena.com', icon: Mail },
+  { name: 'GitHub', href: 'https://github.com/davecharm16', icon: Github },
+  { name: 'LinkedIn', href: 'https://linkedin.com/in/davecharm', icon: Linkedin },
+  { name: 'Email', href: 'mailto:davecharm16@gmail.com', icon: Mail },
 ];
 
 export function Footer() {

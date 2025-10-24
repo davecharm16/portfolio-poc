@@ -28,8 +28,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const currentImage = allImages[currentImageIndex];
 
   return (
-    <CardContainer className="w-full">
-      <CardBody className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden hover:shadow-xl transition-all relative group/card w-full h-full">
+    <CardContainer className="w-full h-full">
+      <CardBody className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden hover:shadow-xl transition-all relative group/card w-full h-full flex flex-col">
         {/* Image Carousel */}
         {currentImage && (
           <CardItem translateZ="50" className="w-full">
@@ -80,7 +80,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         )}
 
         {/* Content */}
-        <div className="p-6">
+        <div className="p-6 flex-1 flex flex-col">
           <CardItem translateZ="40" className="w-full">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               {project.title}
@@ -114,7 +114,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </CardItem>
 
           {/* Links */}
-          <CardItem translateZ="30" className="flex gap-4 w-full">
+          <CardItem translateZ="30" className="flex gap-4 w-full mt-auto">
             {project.githubUrl && (
               <a
                 href={project.githubUrl}

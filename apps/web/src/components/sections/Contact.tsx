@@ -26,7 +26,7 @@ export function Contact() {
                 href="mailto:dave@davebulaquena.com"
                 className="text-lg text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
               >
-                dave@davebulaquena.com
+                davecharm16@gmail.com
               </a>
             </div>
 

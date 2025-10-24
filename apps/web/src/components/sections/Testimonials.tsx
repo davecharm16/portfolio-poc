@@ -50,8 +50,7 @@ function TestimonialCard({ testimonial, position, handleShuffle }: TestimonialCa
       }}
       animate={{
         rotate: position === 'front' ? '-3deg' : position === 'middle' ? '0deg' : '3deg',
-        x: position === 'front' ? '0%' : position === 'middle' ? '10%' : '20%',
-        y: position === 'front' ? '0%' : position === 'middle' ? '5%' : '10%',
+        y: position === 'front' ? 0 : position === 'middle' ? 8 : 16,
         opacity: position === 'front' ? 1 : position === 'middle' ? 0.7 : 0.4,
         scale: position === 'front' ? 1 : position === 'middle' ? 0.95 : 0.9,
       }}
@@ -70,7 +69,7 @@ function TestimonialCard({ testimonial, position, handleShuffle }: TestimonialCa
         dragRef.current = 0;
       }}
       transition={{ duration: 0.35 }}
-      className={`absolute left-1/2 -translate-x-1/2 top-0 flex flex-col h-[320px] w-[260px] select-none rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-5 shadow-xl ${
+      className={`absolute left-0 right-0 mx-auto top-0 flex flex-col h-[320px] md:h-[400px] w-[260px] md:w-[340px] select-none rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-5 md:p-6 shadow-xl ${
         isFront ? 'cursor-grab active:cursor-grabbing' : ''
       }`}
     >
@@ -129,7 +128,7 @@ export function Testimonials() {
           </p>
         </ScrollReveal>
 
-        <div className="relative h-[380px] w-full max-w-md mx-auto mb-20">
+        <div className="relative h-[380px] md:h-[460px] w-full max-w-md md:max-w-lg mx-auto mb-20 flex items-start justify-center">
           {cards.map((testimonial, index) => {
             const position: Position =
               index === 0 ? 'front' : index === 1 ? 'middle' : 'back';

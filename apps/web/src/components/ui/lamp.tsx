@@ -18,11 +18,20 @@ export const LampContainer = ({
         className
       )}
     >
-      {/* Lamp effect - hidden in light mode */}
+      {/* Light mode: Sky Blue Glow */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none dark:hidden"
+        style={{
+          backgroundImage: 'radial-gradient(circle at center, #93c5fd, transparent)',
+        }}
+      />
+
+      {/* Dark mode: Lamp effect */}
       <div className="hidden dark:flex absolute -top-40 left-0 right-0 w-full h-[50rem] scale-y-125 items-center justify-center isolate z-0">
         <motion.div
+          key="lamp-cone-left"
           initial={{ opacity: 0.5, width: '15rem' }}
-          whileInView={{ opacity: 1, width: '30rem' }}
+          animate={{ opacity: 1, width: '30rem' }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -37,8 +46,9 @@ export const LampContainer = ({
           <div className="absolute w-40 h-[100%] left-0 bg-slate-950 bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
         </motion.div>
         <motion.div
+          key="lamp-cone-right"
           initial={{ opacity: 0.5, width: '15rem' }}
-          whileInView={{ opacity: 1, width: '30rem' }}
+          animate={{ opacity: 1, width: '30rem' }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -56,8 +66,9 @@ export const LampContainer = ({
         <div className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
         <div className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-cyan-500 opacity-50 blur-3xl"></div>
         <motion.div
+          key="lamp-glow-small"
           initial={{ width: '8rem' }}
-          whileInView={{ width: '16rem' }}
+          animate={{ width: '16rem' }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -66,8 +77,9 @@ export const LampContainer = ({
           className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-cyan-400 blur-2xl"
         ></motion.div>
         <motion.div
+          key="lamp-beam"
           initial={{ width: '15rem' }}
-          whileInView={{ width: '30rem' }}
+          animate={{ width: '30rem' }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -79,7 +91,7 @@ export const LampContainer = ({
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-slate-950"></div>
       </div>
 
-      <div className="relative z-50 flex flex-col items-center justify-center min-h-screen px-5">
+      <div className="relative z-50 flex flex-col items-center justify-center min-h-screen px-5 pt-20 md:pt-0">
         {children}
       </div>
     </div>

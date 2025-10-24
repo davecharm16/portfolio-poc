@@ -4,6 +4,7 @@ import { useProjects } from '@/hooks/useProjects';
 import { LoadingSkeleton } from '@/components/common/LoadingSkeleton';
 import { ErrorMessage } from '@/components/common/ErrorMessage';
 import { ProjectCard } from './ProjectCard';
+import { ProjectsCarousel } from '@/components/ui/projects-carousel';
 
 // Mock data - used as fallback if Strapi is not running
 const mockProjects = [
@@ -75,13 +76,13 @@ export function Projects() {
       )}
 
       {!isLoading && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {displayProjects.map((project, index) => (
-            <ScrollReveal key={project.id} variant="fade-up" delay={index * 150}>
+        <ProjectsCarousel>
+          {displayProjects.map((project) => (
+            <div key={project.id} className="flex-[0_0_100%] md:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 h-[600px]">
               <ProjectCard project={project} />
-            </ScrollReveal>
+            </div>
           ))}
-        </div>
+        </ProjectsCarousel>
       )}
     </Section>
   );
