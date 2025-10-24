@@ -4,15 +4,15 @@ import { ScrollReveal } from '@/components/common/ScrollReveal';
 export function About() {
   return (
     <Section id="about" className="bg-white dark:bg-gray-950">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-3xl mx-auto px-4">
         <ScrollReveal variant="fade-up">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 text-center">
             About Me
           </h2>
         </ScrollReveal>
 
         <ScrollReveal variant="fade-up" delay={100}>
-          <div className="space-y-4 text-lg text-gray-600 dark:text-gray-400">
+          <div className="space-y-4 text-lg text-gray-600 dark:text-gray-400 text-center md:text-left">
             <p>
               I'm a Full Stack Developer and Solutions Designer who bridges the gap between technical
               implementation and user-centered design. With expertise spanning modern frontend

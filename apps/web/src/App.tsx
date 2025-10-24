@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import { HomePage } from '@/pages/HomePage';
+import { SEO } from '@/components/common/SEO';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -17,6 +18,7 @@ export function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
+        <SEO />
         <HomePage />
         <ReactQueryDevtools initialIsOpen={false} />
       </ThemeProvider>
