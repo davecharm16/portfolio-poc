@@ -1,6 +1,7 @@
 import { Section } from '@/components/layout/Section';
 import { ScrollReveal } from '@/components/common/ScrollReveal';
 import { Mail, MapPin } from 'lucide-react';
+import { ContactForm } from '@/components/forms/ContactForm';
 
 export function Contact() {
   return (
@@ -40,10 +41,8 @@ export function Contact() {
         </ScrollReveal>
 
         <ScrollReveal variant="fade-up" delay={300}>
-          <div className="mt-12 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
-            <p className="text-gray-600 dark:text-gray-400">
-              Contact form coming soon. For now, please reach out via email.
-            </p>
+          <div className="mt-12">
+            <ContactForm />
           </div>
         </ScrollReveal>
       </div>
