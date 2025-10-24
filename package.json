@@ -5,8 +5,9 @@
   "type": "module",
   "engines": {
     "node": ">=20.0.0",
-    "pnpm": ">=6.35.0"
+    "pnpm": ">=9.0.0"
   },
+  "packageManager": "pnpm@9.15.0+sha512.a8db2e33e8a9cae7c4d80ff641abab44d86cf4c24e5e13cfe5c7b547ad5ec941",
   "scripts": {
     "dev": "pnpm -r --parallel run dev",
     "dev:web": "pnpm --filter web dev",
