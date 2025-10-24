@@ -1,6 +1,7 @@
 import { Section } from '@/components/layout/Section';
 import { ScrollReveal } from '@/components/common/ScrollReveal';
 import { BlurredInfiniteSlider } from '@/components/ui/infinite-slider';
+import { OptimizedImage } from '@/components/common/OptimizedImage';
 
 const skillCategories = [
   {
@@ -70,10 +71,12 @@ export function Skills() {
                     key={skill.name}
                     className="flex-shrink-0 flex items-center gap-4 px-8 py-4 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg transition-shadow"
                   >
-                    <img
+                    <OptimizedImage
                       src={skill.logo}
                       alt={skill.name}
                       className="w-10 h-10 object-contain dark:invert-0"
+                      width={40}
+                      height={40}
                     />
                     <span className="text-base font-medium text-gray-900 dark:text-gray-100 whitespace-nowrap">
                       {skill.name}
