@@ -2,7 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "pnpm --filter web build",
   "outputDirectory": "apps/web/dist",
-  "installCommand": "npm install -g pnpm@9.15.0 > /dev/null 2>&1 && pnpm install --no-frozen-lockfile",
   "framework": null,
   "devCommand": "pnpm --filter web dev"
 }
