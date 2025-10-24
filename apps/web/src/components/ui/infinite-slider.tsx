@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useAnimationFrame, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useAnimationFrame, useMotionValue } from 'framer-motion';
 import { useRef, useState, ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -8,7 +8,6 @@ interface InfiniteSliderProps {
   children: ReactNode;
   gap?: number;
   speed?: number;
-  direction?: 'horizontal' | 'vertical';
   reverse?: boolean;
   pauseOnHover?: boolean;
 }
@@ -17,7 +16,6 @@ export function InfiniteSlider({
   children,
   gap = 16,
   speed = 40,
-  direction = 'horizontal',
   reverse = false,
   pauseOnHover = false,
 }: InfiniteSliderProps) {
@@ -26,7 +24,7 @@ export function InfiniteSlider({
   const contentRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
 
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((_t, delta) => {
     if (pauseOnHover && hovering) return;
 
     const directionMultiplier = reverse ? 1 : -1;
@@ -75,7 +73,6 @@ interface BlurredInfiniteSliderProps {
   children: ReactNode;
   gap?: number;
   speed?: number;
-  fadeWidth?: number;
   reverse?: boolean;
   pauseOnHover?: boolean;
   className?: string;
@@ -85,7 +82,6 @@ export function BlurredInfiniteSlider({
   children,
   gap = 16,
   speed = 40,
-  fadeWidth = 80,
   reverse = false,
   pauseOnHover = true,
   className,

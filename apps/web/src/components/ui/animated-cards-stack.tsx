@@ -67,7 +67,6 @@ export const CardTransformed: React.FC<CardTransformedProps> = ({
   index,
   arrayLength,
   className,
-  ...props
 }) => {
   const context = React.useContext(ContainerScrollContext);
 
@@ -117,7 +116,6 @@ export const CardTransformed: React.FC<CardTransformedProps> = ({
         transformStyle: 'preserve-3d',
         zIndex: arrayLength - index,
       }}
-      {...props}
     >
       {children}
     </motion.div>

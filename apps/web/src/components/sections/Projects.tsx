@@ -79,7 +79,7 @@ export function Projects() {
         <ProjectsCarousel>
           {displayProjects.map((project) => (
             <div key={project.id} className="flex-[0_0_100%] md:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 h-[550px]">
-              <ProjectCard project={project} />
+              <ProjectCard project={project as any} />
             </div>
           ))}
         </ProjectsCarousel>

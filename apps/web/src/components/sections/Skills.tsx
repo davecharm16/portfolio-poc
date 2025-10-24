@@ -62,7 +62,6 @@ export function Skills() {
               <BlurredInfiniteSlider
                 speed={category.speed}
                 gap={48}
-                fadeWidth={80}
                 reverse={index % 2 === 1}
                 className="py-6"
               >

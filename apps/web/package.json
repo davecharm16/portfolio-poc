@@ -13,6 +13,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
     "@portfolio/types": "workspace:*",
     "@portfolio/ui": "workspace:*",
     "@portfolio/utils": "workspace:*",

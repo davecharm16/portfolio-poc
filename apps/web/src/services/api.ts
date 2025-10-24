@@ -1,5 +1,5 @@
 import type { Image } from '@portfolio/types';
-import type { StrapiImage, StrapiCollectionResponse } from '@/types/strapi';
+import type { StrapiImage } from '@/types/strapi';
 
 const STRAPI_URL = import.meta.env.VITE_STRAPI_API_URL || 'http://localhost:1337';
 const STRAPI_TOKEN = import.meta.env.VITE_STRAPI_API_TOKEN;

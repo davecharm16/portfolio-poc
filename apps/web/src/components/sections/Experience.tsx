@@ -1,6 +1,6 @@
 import { Section } from '@/components/layout/Section';
 import { Timeline } from '@/components/ui/timeline';
-import { Briefcase, Calendar } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {

@@ -12,7 +12,13 @@
       "Bash(pnpm dev:*)",
       "Bash(pnpm:*)",
       "Bash(npm run build-release:*)",
-      "Bash(npx:*)"
+      "Bash(npx:*)",
+      "Bash(cat:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfix: configure corepack for vercel pnpm version\n\n- Enable corepack to use correct pnpm version\n- Activate latest pnpm before install\n- Simplify build command\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Read(//Users/davecharmbulaquena/Desktop/personal/**)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfix: use npm to install pnpm globally on vercel\n\n- Replace corepack with npm install -g pnpm@9.15.0\n- Vercel''s corepack is outdated, direct install works better\n- Matches packageManager version in package.json\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
