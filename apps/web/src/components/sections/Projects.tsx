@@ -47,14 +47,14 @@ export function Projects() {
   return (
     <Section id="projects" className="bg-white dark:bg-gray-950">
       <ScrollReveal variant="fade-up">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
           Featured Projects
         </h2>
       </ScrollReveal>
 
       {isUsingMockData && !isLoading && (
         <ScrollReveal variant="fade-up" delay={100}>
-          <p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-8">
+          <p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-12">
             Showing sample projects. Connect Strapi to display your real projects.
           </p>
         </ScrollReveal>
@@ -78,7 +78,7 @@ export function Projects() {
       {!isLoading && (
         <ProjectsCarousel>
           {displayProjects.map((project) => (
-            <div key={project.id} className="flex-[0_0_100%] md:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 h-[600px]">
+            <div key={project.id} className="flex-[0_0_100%] md:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 h-[550px]">
               <ProjectCard project={project} />
             </div>
           ))}

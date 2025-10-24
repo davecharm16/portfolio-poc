@@ -28,8 +28,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const currentImage = allImages[currentImageIndex];
 
   return (
-    <CardContainer className="w-full h-full">
-      <CardBody className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden hover:shadow-xl transition-all relative group/card w-full h-full flex flex-col">
+    <CardContainer className="w-full !h-full">
+      <CardBody className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden hover:shadow-xl transition-all relative group/card w-full !h-full flex flex-col">
         {/* Image Carousel */}
         {currentImage && (
           <CardItem translateZ="50" className="w-full">

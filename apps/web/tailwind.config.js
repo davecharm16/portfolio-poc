@@ -61,6 +61,22 @@ export default {
   			]
   		},
   		keyframes: {
+  			'spin-slow': {
+  				from: {
+  					transform: 'rotate(0deg)'
+  				},
+  				to: {
+  					transform: 'rotate(360deg)'
+  				}
+  			},
+  			'spin-slower': {
+  				from: {
+  					transform: 'rotate(0deg)'
+  				},
+  				to: {
+  					transform: 'rotate(360deg)'
+  				}
+  			},
   			gradient: {
   				'0%, 100%': {
   					backgroundPosition: '0% 50%'
@@ -119,6 +135,8 @@ export default {
   			}
   		},
   		animation: {
+  			'spin-slow': 'spin-slow 120s linear infinite',
+  			'spin-slower': 'spin-slower 150s linear infinite reverse',
   			gradient: 'gradient 8s linear infinite',
   			'fade-in': 'fade-in 0.6s ease-out',
   			'slide-in-from-bottom-4': 'slide-in-from-bottom-4 0.6s ease-out',

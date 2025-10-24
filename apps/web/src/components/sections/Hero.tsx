@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { LampContainer } from '@/components/ui/lamp';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { NeonButton } from '@/components/ui/neon-button';
 
 export function Hero() {
   return (
@@ -32,18 +33,12 @@ export function Hero() {
 
         {/* Animated CTA buttons */}
         <div className="flex gap-4 mb-12">
-          <a
-            href="#contact"
-            className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gray-900 dark:bg-slate-200 px-6 py-3 text-sm font-semibold text-white dark:text-slate-900 transition-all hover:scale-105 hover:shadow-xl"
-          >
-            <span className="relative z-10">Get in touch</span>
-          </a>
-          <a
-            href="#projects"
-            className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg border border-gray-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 px-6 py-3 text-sm font-semibold text-gray-900 dark:text-slate-200 backdrop-blur-sm transition-all hover:scale-105 hover:border-gray-400 dark:hover:border-slate-500 hover:shadow-xl"
-          >
-            <span className="relative z-10">View projects</span>
-          </a>
+          <NeonButton href="#contact" variant="primary" enableNeon={false}>
+            Get in touch
+          </NeonButton>
+          <NeonButton href="#projects" variant="secondary" enableNeon={true}>
+            View projects
+          </NeonButton>
         </div>
 
         {/* Animated social links */}
