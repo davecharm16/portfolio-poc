@@ -1,0 +1,89 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+
+  <!-- Gradient Overlay -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0.15" />
+    </linearGradient>
+    <linearGradient id="profileGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="1000" cy="200" rx="600" ry="500" fill="url(#gradient)"/>
+
+  <!-- Profile Circle with Initials -->
+  <circle cx="160" cy="240" r="90" fill="url(#profileGradient)"/>
+  <circle cx="160" cy="240" r="92" stroke="#8B5CF6" stroke-width="4" fill="none" opacity="0.5"/>
+  <text x="160" y="270" font-family="Inter, sans-serif" font-size="72" font-weight="800" fill="white" text-anchor="middle">DC</text>
+
+  <!-- Name -->
+  <text x="300" y="200" font-family="Inter, sans-serif" font-size="64" font-weight="800" fill="white" letter-spacing="-1">DAVE CHARM</text>
+  <text x="300" y="270" font-family="Inter, sans-serif" font-size="64" font-weight="800" fill="white" letter-spacing="-1">BULAQUENA</text>
+
+  <!-- Role -->
+  <text x="300" y="320" font-family="Inter, sans-serif" font-size="36" font-weight="500" fill="#E5E5E5">Full Stack Developer &amp;</text>
+  <text x="300" y="360" font-family="Inter, sans-serif" font-size="36" font-weight="500" fill="#E5E5E5">Solutions Designer</text>
+
+  <!-- Skill Badges Row 1 -->
+  <g transform="translate(100, 410)">
+    <!-- React -->
+    <rect x="0" y="0" width="110" height="48" rx="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="55" y="32" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">React</text>
+
+    <!-- TypeScript -->
+    <rect x="125" y="0" width="160" height="48" rx="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="205" y="32" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">TypeScript</text>
+
+    <!-- Node.js -->
+    <rect x="300" y="0" width="130" height="48" rx="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="365" y="32" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">Node.js</text>
+
+    <!-- Tailwind -->
+    <rect x="445" y="0" width="140" height="48" rx="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="515" y="32" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">Tailwind</text>
+  </g>
+
+  <!-- Skill Badges Row 2 -->
+  <g transform="translate(100, 472)">
+    <!-- PostgreSQL -->
+    <rect x="0" y="0" width="160" height="48" rx="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="80" y="32" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">PostgreSQL</text>
+
+    <!-- AWS -->
+    <rect x="175" y="0" width="90" height="48" rx="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="220" y="32" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">AWS</text>
+
+    <!-- Docker -->
+    <rect x="280" y="0" width="120" height="48" rx="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="340" y="32" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">Docker</text>
+
+    <!-- Strapi -->
+    <rect x="415" y="0" width="110" height="48" rx="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="470" y="32" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">Strapi</text>
+  </g>
+
+  <!-- Stats -->
+  <g transform="translate(100, 550)">
+    <!-- 15+ Projects -->
+    <text x="0" y="0" font-family="Inter, sans-serif" font-size="28" fill="white">⭐</text>
+    <text x="40" y="0" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="white">15+</text>
+    <text x="82" y="0" font-family="Inter, sans-serif" font-size="24" fill="#A3A3A3"> Projects</text>
+
+    <!-- 5+ Years -->
+    <text x="240" y="0" font-family="Inter, sans-serif" font-size="28" fill="white">📊</text>
+    <text x="280" y="0" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="white">5+</text>
+    <text x="315" y="0" font-family="Inter, sans-serif" font-size="24" fill="#A3A3A3"> Years</text>
+
+    <!-- Certified -->
+    <text x="450" y="0" font-family="Inter, sans-serif" font-size="28" fill="white">🎓</text>
+    <text x="490" y="0" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="white">Certified</text>
+  </g>
+
+  <!-- Website URL -->
+  <text x="1040" y="580" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#A3A3A3" text-anchor="end">davebulaquena.com</text>
+</svg>
