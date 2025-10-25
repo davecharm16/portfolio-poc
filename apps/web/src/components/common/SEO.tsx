@@ -24,8 +24,8 @@ export function SEO({
   const defaultTitle = 'Dave Charm Bulaquena | Full Stack Developer & Solutions Designer';
   const defaultDescription =
     'Full Stack Developer specializing in React, TypeScript, Node.js, and modern web technologies. Creating scalable applications with clean code and thoughtful UX.';
-  const defaultImage = 'https://davebulaquena.com/og-image.svg';
-  const defaultUrl = 'https://davebulaquena.com/';
+  const defaultImage = 'https://portfolio-poc-web.vercel.app/og-image.svg';
+  const defaultUrl = 'https://portfolio-poc-web.vercel.app/';
 
   const seoTitle = title || defaultTitle;
   const seoDescription = description || defaultDescription;

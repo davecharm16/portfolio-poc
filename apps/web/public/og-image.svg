@@ -85,5 +85,5 @@
   </g>
 
   <!-- Website URL -->
-  <text x="1040" y="580" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#A3A3A3" text-anchor="end">davebulaquena.com</text>
+  <text x="1040" y="580" font-family="Inter, sans-serif" font-size="20" font-weight="500" fill="#A3A3A3" text-anchor="end">portfolio-poc-web.vercel.app</text>
 </svg>
